@@ -28,17 +28,9 @@ let y: undefined = undefined;
 
 **bigint:** A type for arbitrary-precision integers, such as 9007199254740991n or 0b101n.
 
-#### NOT SURE THE CATEGORY
+###
 
-**array:** A collection of values of the same type, either written as type[] or Array<type>.
-```ts
-let list1: number[] = [1, 2, 3];
-let list2: Array<number> = [1, 2, 3];
-```
-**tuple:** A fixed-length array of values of different types.
-```ts
-let pair: [string, number] = ["Bob", 42];
-```
+## Special types
 **enum:** A named set of constant values.
 ```ts
 enum Color {Red, Green, Blue};
@@ -64,14 +56,10 @@ function log(message: string): void { console.log(message); }
 ```ts
 function error(message: string): never { throw new Error(message); }
 ```
-**object:** A type that represents any non-primitive value.
-```ts
-let person: object = {name: "Charlie", age: 25};
-```
 
 ###
 
-## Object
+## Object Types
 
 **interface:** A type that describes the shape of an object, such as its properties and methods. For example:
 ```ts
@@ -93,25 +81,22 @@ class Animal {
       }
 }
 ```
-**alias:** A type that gives a new name to an existing type, which can be an object type or any other type.
+**array:** A collection of values of the same type, either written as type[] or Array<type>.
 ```ts
-type Point = { x: number; y: number };
+let list1: number[] = [1, 2, 3];
+let list2: Array<number> = [1, 2, 3];
 ```
-**array:** A type that represents a collection of values of the same type.
+**tuple:** A fixed-length array of values of different types.
 ```ts
-let numbers: number[] = [1, 2, 3];
+let pair: [string, number] = ["Bob", 42];
 ```
-**tuple:** A type that represents a fixed-length array of values of different types.
+**object:** A type that represents any non-primitive value.
 ```ts
-let pair: [string, number] = ["Alice", 42];
+let person: object = {name: "Charlie", age: 25};
 ```
 **function:** A type that represents a callable object with parameters and a return value.
 ```ts
 let add: (x: number, y: number) => number = (x, y) => x + y;
-```
-**constructor:** A type that represents a function that can be used with the new operator to create an instance of a class or interface.
-```ts
-let person: new (name: string, age: number) => Person = Person;
 ```
 ##
 ### Union and intersection
