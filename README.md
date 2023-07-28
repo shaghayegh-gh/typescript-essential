@@ -24,9 +24,19 @@ let x: null = null;
 ```ts
 let y: undefined = undefined;
 ```
-**symbol:** A type for unique and immutable values, such as Symbol("foo").
+**symbol:** A type for unique and immutable values.
+```ts
+let sym = Symbol();
+let obj = {
+      [sym]: "value"
+};
+```
 
-**bigint:** A type for arbitrary-precision integers, such as 9007199254740991n or 0b101n.
+**bigint:** A type for arbitrary-precision integers.
+```ts
+let big = 123n;
+let big2 = big + 456n; // 579n
+```
 
 ###
 
@@ -50,11 +60,15 @@ something = true; // need to check the type before using it
 ```
 **void:** A type that represents the absence of any value, usually used for functions that do not return anything.
 ```ts
-function log(message: string): void { console.log(message); }
+function log(message: string): void {
+       console.log(message);
+}
 ```
 **never:** A type that represents values that never occur, such as a function that always throws an error or never returns.
 ```ts
-function error(message: string): never { throw new Error(message); }
+function error(message: string): never {
+      throw new Error(message);
+}
 ```
 
 ###
